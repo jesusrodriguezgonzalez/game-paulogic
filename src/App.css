@@ -1,38 +1,133 @@
-.App {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.title {
+  font-size: 3rem;
+  letter-spacing: -2px;
+  transform: scaleY(1.1) scaleX(0.9);
+}
+
+.title__accent {
+  color: #4dc7da;
+}
+
+.title__accent-secondary {
+  color: transparent;
+  letter-spacing: -20px;
+}
+.title__accent-secondary::before {
+  content: "Ó";
+  position: absolute;
+  color: #ec4a49;
+  transform: rotate(-25deg) scale(0.8, 1.2) translate(-10px, 9px);
+}
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.center {
+  width: 612px;
+  margin: 30px 0;
+}
+
+.row:nth-child(odd) {
+  position: relative;
+  margin-bottom: -16px;
+}
+.row:nth-child(even) {
+  margin-bottom: -16px;
+}
+.hex {
+  display: inline-flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 500;
+  width: 90px;
+  aspect-ratio: 1;
+  background: #63bcca;
+  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+  margin: 0 -4px;
+  cursor: pointer;
+}
+.hex:hover {
+  background: #3daabb;
+}
+
+.required-letter {
+  background-color: #ec4a49;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.required-letter:hover {
+  background-color: #d84141;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.words-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+.purple-word {
+  color: black;
+}
+
+.text-input {
+  margin: 10px;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  caret-color: transparent;
+  text-transform: lowercase;
+}
+
+.text-input::after {
+  content: "|";
+  color: #4dc7da;
+  font-size: 2.3rem;
+  transform: scale(0.8, 1.2);
+  animation: blink 0.8s linear 0s infinite;
+}
+
+#word-count {
+  font-weight: 400;
+}
+
+.word-count__accent {
+  font-weight: 800;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  border: 2px solid rgb(224, 224, 224);
+  border-radius: 20px;
+  box-shadow: none;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(224, 224, 224);
+}
+
+@keyframes blink {
+  0% {
+    color: #4dc7da;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    color: transparent;
   }
 }
