@@ -6,8 +6,6 @@ In this repository we find an imitation of the game "Paraulògic - VilaWeb" made
 ### Deployment
 
 
-You can play by clicking on the following link  [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+You can play by clicking on the following link  [https://clone-paulogic.netlify.app)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://clone-paulogic.netlify.app)
